@@ -46,12 +46,10 @@ table {
 }
 /* --Custim Styles--*/
 body {
-    font-family: "Roboto", "Arial", san-serif;
-    background: rgb(243, 243, 243);
+    font: 400 14px/21px "Roboto", "Arial", san-serif;
 }
 
 /* --Grid-- */
-
 *,
 *:before,
 *:after {
@@ -60,38 +58,47 @@ body {
           box-sizing: border-box;
 }
 .container {
-    background: transparent;
+    background: rgb(248, 248, 248);
     margin: 0 auto;
     width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
 }
-.main {
-    padding-top: 76px;
-}
+
 .col-primary {
     width: 70%;
-    padding-right: 12px;
 }
 .col-side {
     width: 30%;
-    padding-left: 12px;
 }
 .col-primary,
 .col-side {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 20px;
+    padding: 0 12px;
 }
 .box {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* -- lists --*/
+.right {
+    float: right;
+}
+li {
+    display: inline-block;
+    margin-left: 20px;   
+    color: rgb(96,96,96);
+}
+li:first-of-type {
+    margin-left: 0;
 }
 
 /* --Clearfix-- */
-
 .group:before,
 .group:after {
   content: "";
@@ -104,34 +111,26 @@ body {
   clear: both;
   *zoom: 1;
 }
-/* --Icons --*/
 
+/* --Icons --*/
 .material-icons{ color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-18 { font-size: 18px; }
-/* --Typography--*/
+.material-icons.rotated {transform: rotateY(180deg);}
+.material-icons.moved { transform: translateY(3px); }
 
+/* --Typography--*/
 h2 {
     font-size: 18px;
-    font-weight: 400;
     line-height: 24px;
     text-transform: capitalize;
+    margin-bottom: 20px;
 }
-
 h3 {
-    font-size: 14px;
     font-weight: 500;
-    line-height: 16px;
 }
-
-h5 {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-}
-p {
+p.grey {
     color: rgb(96,96,96);
     font-size: 13px;
-    font-weight: 400;
     line-height: 18px;
 } 
 /* -- Avatar --*/
@@ -151,6 +150,7 @@ p {
     border-radius: 50%;
     margin-right: 15px;    
 }
+
 /* --buttons -- */
 .btn {
     height: 36px;
@@ -160,8 +160,9 @@ p {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: .07px;
-    text-transform: uppercase;
+    outline: none;
     padding: 10px 16px;
+    text-transform: uppercase;
 }
 .btn-subscribe {
     background-color: rgba(0,0,0,.05);
@@ -178,7 +179,6 @@ p {
 }
 /* -- header --*/
 .header-primary {
-    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -194,7 +194,7 @@ p {
     width: 45%;
     margin: 0;
     padding: 0;
-    border: 1px solid lightgrey;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     text-align: right;
 }
 .search input {
@@ -209,18 +209,10 @@ p {
     height: 32px;
     width: 10%;
     border: none;
-    border-left: 1px solid lightgrey;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
     margin: 0;
 }
-li {
-    display: inline-block;
-    margin-left: 20px;
-    
-}
-li:first-of-type {
-    margin-left: 0
-}
-/* --Columns--*/
+/* --Video--*/
 .video {
     padding-top: 56.25%;  
     position: relative;  
@@ -234,10 +226,9 @@ iframe {
     height: 100%;
 }
 .video-info {
-    margin: 10px 0;
     padding: 20px 0;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* -- Side Section --*/
@@ -246,7 +237,7 @@ iframe {
 }
 .video-thumb:first-of-type {
     padding-bottom: 20px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 .video-thumb img {
@@ -262,7 +253,7 @@ iframe {
 .comment-form input {
     background: transparent;
     border: none;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 14px;
     line-height: 18px;
     outline: none;
