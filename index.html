@@ -3,52 +3,101 @@
     <head>
         <meta charset="utf-8">
         <title>Youtube Copy-Cat</title>
-        <link rel="stylesheet" href="style.css">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     </head>
 </html>
 <body>
-    <header class="group container">
-        <a href="#">&#9776;</a>
-        <a href="#"><img src="#" alt="logo"></a>
+    <header class="header-primary container">
         <div>
-            <input placeholder="Search">
-            <button>Search</button>
+            <a href="#"><i class="material-icons">menu</i></a>
+            <a href="#"><img class="logo" src="images/yt_logo_rgb_light.png"></a>
+            </div>
+        <div class="search">
+        <form>
+            <input type="text" placeholder="Search">
+            <button type="button"><i class="material-icons md-18">search</i></button>
+        </form>
         </div>
-        <nav>	&#128249;</nav>
+        <ul>
+               <li><a href="#"><i class="material-icons">video_call</i></a></li>
+               <li><i class="material-icons">apps</i></li>
+               <li><i class="material-icons">notifications</i></li>
+               <li><img class="profile-img avatar" src="images/pexels-photo-2294353.jpeg"></li>
+        </ul>
+        
     </header>
     <section class="container main">
-        <section class="col-primary">
+        <section class=" col-primary">
+            <div class="video"> 
+                <iframe src="https://www.youtube.com/embed/THQvlFw-PRA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             
             <h2>30 minute harmonizing yoga flow - nice and easy, practive for inner peace</h2>
-            <div>
-            
+            <div class="group">
+               
+                <ul style="float:right;">
+                    <li><i class="material-icons md-18">thumb_up</i> 253</li>
+                    <li><i class="material-icons md-18">thumb_down</i> 3</li>
+                    <li><i class="material-icons md-18">touch_app</i> APPLAUD</li>
+                    <li><i class="material-icons md-18">reply</i> SHARE</li>
+                    <li><i class="material-icons md-18">playlist_add</i> SAVE</li>
+                    <li>...</li>
+                </ul>
+                <p>5.632 views &middot; Sep 13, 2020</p>
             </div>
-            <div class="group video-info">
-                <img class="avatar" src="images/young-women-yoga-indoors-keep-calm-meditates-while-practicing-yoga-explore-inner-peace-yoga-meditation-have-good-benefits-health-photo-concept-yoga-sport-healthy-lifestyle_1253-1052.jpg">
-                <button>subscribed</button>
-                <h3>KinoYoga</h3>
-                <p>707k subscribers</p>    
-                
+            <div class="box group video-info">
+                <img class="author-img avatar" src="images/young-women-yoga-indoors-keep-calm-meditates-while-practicing-yoga-explore-inner-peace-yoga-meditation-have-good-benefits-health-photo-concept-yoga-sport-healthy-lifestyle_1253-1052.jpg">
+                <div>    
+                    <h3>KinoYoga</h3>
+                    <p>707k subscribers</p>    
                     <h5>30 Minute Harmonizing Yoga Flow — Nice and Easy, Practice for Inner Peace is a good practice for all levels set in the beautiful landscape of Norway at Nøsen Yoga. When you want to wind down, take it easy and still work your core strength, utilizing the abs,  
                     </h5>
-            </div>
-
-            
-            <section class="comments">
-            
-              <div class="group comments-input">
-                <img class="avatar" src="images/pexels-photo-2294353.jpeg">
-                <input placeholder="Add a public comment">
-                <button hidden>Cancel</button>
-                <button hidden>Comment</button>
-              </div> 
-              <div class="group">
-                <img class="avatar" src="images/pexels-photo-2294353.jpeg">
-                <h3>Monica Kim</h3>
-                <h5>That cream colored outfit and background is stunning. Thank you for this practice tonight 🙏🏻📿🌅
-                </h5>
                 </div>
+                <button type="button" class="btn btn-subscribe">subscribed</button>
+            </div>
+            <section class="comments">
+                <div class="group box comments-input">
+                    <img class="comment-img avatar" src="images/pexels-photo-2294353.jpeg">
+                    <div class="comment-form">
+                        <input placeholder="Add a public comment...">
+                        <div class="comment-btn-wrapper" hidden>
+                            <button class="btn btn-cancel">Cancel</button>
+                            <button class="btn btn-submit">Comment</button>
+                        </div>
+                    </div>
+                    
+                </div> 
+                <div class="box">
+                    <img class="comment-img avatar" src="images/pexels-photo-2294353.jpeg">
+                    <div>
+                        <h3>Monica Kim</h3>
+                        <h5>That cream colored outfit and background is stunning. Thank you for this practice tonight 🙏🏻📿🌅
+                        </h5>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="comment-img avatar" src="images/pexels-photo-2294353.jpeg">
+                    <div>
+                        <h3>Monica Kim</h3>
+                        <h5>That cream colored outfit and background is stunning. Thank you for this practice tonight 🙏🏻📿🌅
+                        </h5>
+                        <li><i class="material-icons md-18">thumb_up</i> 253</li>
+                        <li><i class="material-icons md-18">thumb_down</i> 3</li>
+                        <li>REPLY</li>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="comment-img avatar" src="images/pexels-photo-2294353.jpeg">
+                    <div>
+                        <h3>Monica Kim</h3>
+                        <h5>That cream colored outfit and background is stunning. Thank you for this practice tonight 🙏🏻📿🌅
+                        </h5>
+                    </div>
+                </div>
+              
             </section>
             
         </section><!--
@@ -76,4 +125,10 @@
 
         </aside>
     </section>
+    <div class="search">
+        <form>
+            <input type="text" placeholder="Search">
+            <button><i class="material-icons">search</i></button>
+        </form>
+        </div>
 </body>

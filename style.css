@@ -47,6 +47,7 @@ table {
 /* --Custim Styles--*/
 body {
     font-family: "Roboto", "Arial", san-serif;
+    background: rgb(243, 243, 243);
 }
 
 /* --Grid-- */
@@ -59,29 +60,34 @@ body {
           box-sizing: border-box;
 }
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 1280px;
-}
-.main {
     background: transparent;
     margin: 0 auto;
-    width: 1280px;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.main {
+    padding-top: 76px;
 }
 .col-primary {
-    width: 60%;
-    background: rgb(233, 226, 226);
+    width: 70%;
     padding-right: 12px;
 }
 .col-side {
     width: 30%;
-    background: rgb(243, 243, 243);
     padding-left: 12px;
 }
 .col-primary,
 .col-side {
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 20px;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /* --Clearfix-- */
@@ -98,7 +104,10 @@ body {
   clear: both;
   *zoom: 1;
 }
+/* --Icons --*/
 
+.material-icons{ color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-18 { font-size: 18px; }
 /* --Typography--*/
 
 h2 {
@@ -125,57 +134,115 @@ p {
     font-weight: 400;
     line-height: 18px;
 } 
-
+/* -- Avatar --*/
+.profile-img {
+    width: 32px;
+    height: 32px;
+}
+.comment-img {
+    width: 40px;
+    height: 40px;
+}
+.author-img {
+    width: 48px;
+    height: 48px;
+}
+.avatar {
+    border-radius: 50%;
+    margin-right: 15px;    
+}
 /* --buttons -- */
-button {
-    color: rgb(96,96,96);
-    background-color: rgba(0,0,0,.05);
+.btn {
+    height: 36px;
     border: transparent;
     border-radius: 2px;
-    letter-spacing: .07px;
+    cursor: pointer;
     font-size: 14px;
     font-weight: 500;
-    height: 36px;
+    letter-spacing: .07px;
     text-transform: uppercase;
-    cursor: pointer;
     padding: 10px 16px;
 }
+.btn-subscribe {
+    background-color: rgba(0,0,0,.05);
+    color: rgb(96,96,96);
+}
+.btn-cancel {
+    color: rgb(96,96,96);
+    background-color: transparent;
+}
+.btn-submit {
+    color: white;
+    background-color: rgb(204,204,204);
 
+}
 /* -- header --*/
-header {
+.header-primary {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    background: white;
+}
+.logo {
+    height: 18px;
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+.search {
+    width: 45%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid lightgrey;
+    text-align: right;
+}
+.search input {
+    width: 87%;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    outline: none;
     
 }
-
-/* --REST--*/
-
-
-
+.search button {
+    height: 32px;
+    width: 10%;
+    border: none;
+    border-left: 1px solid lightgrey;
+    margin: 0;
+}
+li {
+    display: inline-block;
+    margin-left: 20px;
+    
+}
+li:first-of-type {
+    margin-left: 0
+}
+/* --Columns--*/
+.video {
+    padding-top: 56.25%;  
+    position: relative;  
+    margin-bottom: 20px;  
+}
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .video-info {
     margin: 10px 0;
     padding: 20px 0;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-
-}
-.avatar {
-    float: left; 
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%;
-    margin-right: 15px;
-
-    
-}
-.video-info button {
-    float: right; 
-    vertical-align: top;
 }
 
-
-
+/* -- Side Section --*/
 .video-thumb {
     margin: 10px 10px 10px 0;
-
 }
 .video-thumb:first-of-type {
     padding-bottom: 20px;
@@ -183,17 +250,31 @@ header {
     margin-bottom: 20px;
 }
 .video-thumb img {
-    width: 200px; 
+    width: 150px; 
     float: left; 
     padding-right: 10px;
 }
 
-
 /* -- Comments --*/
-
-.comments-input input {
+.comment-form {
+    width: 100%;
+}
+.comment-form input {
+    background: transparent;
     border: none;
-    line-height: 18px;
     border-bottom: 1px solid lightgrey;
+    font-size: 14px;
+    line-height: 18px;
     outline: none;
+    width: 100%;
+}
+.comment-form input:focus {
+    border-bottom: 2px solid black;
+}
+.comment-form input:focus + div {
+    display: block;
+}
+.comment-btn-wrapper {
+    margin-top: 5px;
+    text-align: right;
 }
